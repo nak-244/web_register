@@ -34,7 +34,7 @@ $(document).ready(function() {
     transitionSpeed: 1200,
     showStepURLhash: true,
     toolbarSettings: {
-      toolbarPosition: 'both',
+      toolbarPosition: 'bottom',
       toolbarButtonPosition: 'end',
       toolbarExtraButtons: [btnFinish, btnCancel]
     }
