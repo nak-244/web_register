@@ -55,3 +55,35 @@ $(function(){
 ~~~
 HTMLソース側は、トップページのみフェードインにする為に、トップページで使用するHTMLソースのbodyには`id="index"`を付加している構成になり、
 全てのページにおいて、ソース全体を任意のブロック要素で囲います。（サンプルでは`<div id="container">`としています。）
+
+[パターン2](http://black-flag.net/devel/jQuerySlideMove/02/)
+~~~javascript
+$(function(){
+    $('#container:not(body#index #container)').css({display:'none'});
+    $('#container:not(body#index #container)').slideDown('normal');
+
+    $('body#index #container').css({display:'block',opacity:'0'});
+    $('body#index #container').animate({opacity:'1'},500);
+
+    $('a.prev').click(function(){
+        var pass = $(this).attr("href");
+        $('#container').animate({marginLeft:$(window).width() + 'px',opacity:'0'},500,function(){
+            location.href = pass;
+        });
+        return false;
+    });
+
+    $('a.next').click(function(){
+        var pass = $(this).attr("href");
+        $('#container').animate({marginLeft:'-=' + $(window).width() + 'px',opacity:'0'},500,function(){
+            location.href = pass;
+        });
+        return false;
+    });
+});
+~~~
+トップページ以外のページロード時の動きをスライドダウンに変えてあります。リンクも「次へ」と「前へ」と分けて、それぞれ逆のスライドパターンになっています。
+
+あまり動きをオーバーにすると逆にうっとおしくなる可能性もあるのでほどほどに。
+
+通常のサイトではこういった動きについてはあまり使用する頻度は少ないかもしれませんが、ギャラリー的コンテンツやiPhone用サイト構築なんかでは効果的な演出が組み込めるかな、と思います。
