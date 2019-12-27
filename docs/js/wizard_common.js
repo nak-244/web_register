@@ -30,7 +30,7 @@ $(document).ready(function() {
   $('#smartwizard').smartWizard({
     selected: 0,
     theme: 'default',
-    transitionEffect: 'fade',
+    transitionEffect: 'slide',
     transitionSpeed: 1200,
     showStepURLhash: true,
     toolbarSettings: {
