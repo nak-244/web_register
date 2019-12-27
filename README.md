@@ -20,7 +20,7 @@
 [参考URL](https://willof.jp/works/entry/raisha.html#no02)
 
 ## form wizard
-http://techlaboratory.net/smartwizard/documentation
+[オプション一覧](http://techlaboratory.net/smartwizard/documentation)
 
 ### フォームの項目
 * 氏名（姓・名）
@@ -53,5 +53,5 @@ $(function(){
     });
 });
 ~~~
-HTMLソース側は、トップページのみフェードインにする為に、トップページで使用するHTMLソースのbodyにはid=”index”を付加している構成になり、
-全てのページにおいて、ソース全体を任意のブロック要素で囲います。（サンプルでは<div id=”container”>としています。）
+HTMLソース側は、トップページのみフェードインにする為に、トップページで使用するHTMLソースのbodyには`id="index"`を付加している構成になり、
+全てのページにおいて、ソース全体を任意のブロック要素で囲います。（サンプルでは`<div id="container">`としています。）
