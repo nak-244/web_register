@@ -29,6 +29,7 @@ $(document).ready(function() {
   // Smart Wizard
   $('#smartwizard').smartWizard({
     selected: 0,
+    keyNavigation: false,
     theme: 'default',
     transitionEffect: 'slide',
     transitionSpeed: 1200,
