@@ -19,6 +19,9 @@
 完成したら、ウィルオブのチャット式へ変更。
 [参考URL](https://willof.jp/works/entry/raisha.html#no02)
 
+## form wizard
+http://techlaboratory.net/smartwizard/documentation
+
 ### フォームの項目
 * 氏名（姓・名）
 * 氏名（カタカナ）
