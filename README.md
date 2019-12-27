@@ -29,3 +29,24 @@
 * 電話番号
 * 希望職種
 * 個人情報保護方針確認
+
+## ページ遷移
+[パターン1](http://black-flag.net/devel/jQuerySlideMove/01/)
+
+~~~javascript
+$(function(){
+    $('#container:not(body#index #container)').css({display:'block',marginLeft:$(window).width(),opacity:'0'});
+    $('#container:not(body#index #container)').animate({marginLeft:'0px',opacity:'1'},500);
+
+    $('body#index #container').css({display:'block',opacity:'0'});
+    $('body#index #container').animate({opacity:'1'},500);
+
+    $('a').click(function(){
+        var pass = $(this).attr("href");
+        $('#container').animate({marginLeft:'-=' + $(window).width() + 'px',opacity:'0'},500,function(){
+            location.href = pass;
+        });
+        return false;
+    });
+});
+~~~
