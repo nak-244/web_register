@@ -32,7 +32,7 @@ $(document).ready(function() {
     keyNavigation: false,
     theme: 'default',
     transitionEffect: 'slide',
-    transitionSpeed: 1200,
+    transitionSpeed: 1800,
     showStepURLhash: true,
     toolbarSettings: {
       toolbarPosition: 'bottom',
