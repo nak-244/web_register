@@ -1,3 +1,37 @@
 .none {
   display: none;
 }
+
+.selectradio {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .selectradio .selectradio-item {
+    margin: 5px 0;
+    padding: 0; }
+  .selectradio input[type="radio"] {
+    display: none; }
+  .selectradio input[type="radio"]:checked + label {
+    background: #C0E8FF;
+    color: #333333;
+    border: 2px solid #28A7E1; }
+  .selectradio .selectradio-label {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #333333;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    background: #EEFECD;
+    transition: 0.5s;
+    border-radius: 4px; }
+
+.selectradio.selectradio-inline .selectradio-item {
+  display: inline-block; }
+.selectradio.selectradio-inline .selectradio-label {
+  display: inline-block;
+  width: 100px; }
