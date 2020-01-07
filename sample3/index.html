@@ -14,137 +14,59 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <!-- 追加 -->
+  <link rel="stylesheet" href="assets/css/jquery.steps.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="wizard.css">
+  <script src="js/jquery.steps.js"></script>
+
   <!-- 追加 -->
 </head>
 
 <body>
   <div class="container">
-    <!-- SmartWizard html -->
-    <div id="smartwizard">
-      <ul class="none">
-        <li><a href="#step-1">Step 1<br><small>This is step description</small></a></li>
-        <li><a href="#step-2">Step 2<br><small>This is step description</small></a></li>
-        <li><a href="#step-3">Step 3<br><small>This is step description</small></a></li>
-        <li><a href="#step-4">Step 4<br><small>This is step description</small></a></li>
-      </ul>
-      <div>
-        <div id="step-1">
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100" style="width: 11%"></div>
-          </div>
-          <div class="py-5">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名(漢字)</h3>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">姓</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">名</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="step-2" class="">
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="width: 22%"></div>
-          </div>
-          <div class="py-5">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名(カナ)</h3>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">姓</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">名</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="step-3" class="">
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%"></div>
-          </div>
-          <div class="py-5">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　性別</h3>
-              </div>
-              <div class="col-md-6 col-12 text-center my-3">
-                <ul class="selectradio selectradio-inline">
-                  <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-1" value="1" checked="">
-                    <label for="select2-1" class="selectradio-label">男性</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-12 text-center my-3">
-                <ul class="selectradio selectradio-inline">
-                  <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-2" value="2">
-                    <label for="select2-2" class="selectradio-label">女性</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="step-4" class="">
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%"></div>
-          </div>
-          <div class="py-5">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名</h3>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">姓</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-              <div class="col-12 col-md-6 my-3">
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">名</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Wizard html -->
+
+    <div id="wizard">
+
+      <h1>Page 1</h1>
+      <section>
+        <p>Page 1</p>
+        <input type="text" />
+      </section>
+
+      <h1>Page 2</h1>
+      <section>
+        <p>Page 2</p>
+        <input type="text" />
+        <input type="text" />
+      </section>
+
+      <h1>Page 3</h1>
+      <section>
+        <p>Page 3</p>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </section>
+
     </div>
+
   </div>
 </body>
 
+<script>
+  $().ready(function() {
+    initWizard();
+  });
+  /** initialize */
+  var initWizard = () => {
+    $("#wizard").steps({
+      headerTag: "h1",
+      bodyTag: "section",
+      transitionEffect: "slideLeft",
+    });
+  };
+</script>
 
 </html>
