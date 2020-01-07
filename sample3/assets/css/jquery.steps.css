@@ -1,5 +1,5 @@
 ﻿/*
-    Common 
+    Common
 */
 
 .wizard,
@@ -139,7 +139,6 @@
 
 .wizard > .content
 {
-    background: #eee;
     display: block;
     margin: 0.5em;
     min-height: 35em;
@@ -171,7 +170,6 @@
 
 .wizard > .content > .body ul
 {
-    list-style: disc !important;
 }
 
 .wizard > .content > .body ul > li
@@ -188,7 +186,6 @@
 
 .wizard > .content > .body input
 {
-    display: block;
     border: 1px solid #ccc;
 }
 
