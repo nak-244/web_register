@@ -109,7 +109,6 @@ button {
   outline: none;
   background: none;
   border: none;
-  font-family: inherit;
 }
 
 /* ==========================================================================
@@ -120,7 +119,7 @@ button {
 }
 
 body {
-  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -348,7 +347,6 @@ a:active {
   background: #36c240;
   font-size: 16px;
   color: #fff;
-  font-family: inherit;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -412,7 +410,6 @@ textarea {
   box-shadow: none;
   width: 100%;
   font-size: 18px;
-  font-family: inherit;
 }
 
 input:disabled {
@@ -470,7 +467,6 @@ button {
   border-radius: 3px;
   color: #333;
   font-weight: 700;
-  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
   max-width: 300px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -659,7 +655,6 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0.6;
   left: -109px;
   top: -49px;
-  font-family: "Montserrat", "Arial", "Helvetica Neue", sans-serif;
 }
 
 .card-1 .card-heading .title {
