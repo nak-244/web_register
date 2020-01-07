@@ -17,7 +17,11 @@
                 var current = index + 1;
                 if (current > 1) {
                     var val = parseInt(progressBar.text());
+<<<<<<< HEAD
                     val += 50;
+=======
+                    val += 30;
+>>>>>>> parent of af236da... del
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
@@ -29,7 +33,11 @@
                 var current = index - 1;
                 if (current !== 1) {
                     var val = parseInt(progressBar.text());
+<<<<<<< HEAD
                     val -= 50;
+=======
+                    val -= 30;
+>>>>>>> parent of af236da... del
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
