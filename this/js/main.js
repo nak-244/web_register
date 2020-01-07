@@ -4,7 +4,7 @@ $(function(){
         bodyTag: "section",
         transitionEffect: "fade",
         enableAllSteps: true,
-        onStepChanging: function (event, currentIndex, newIndex) { 
+        onStepChanging: function (event, currentIndex, newIndex) {
             if ( newIndex === 1 ) {
                 $('.wizard > .steps ul').addClass('step-2');
             } else {
@@ -15,7 +15,12 @@ $(function(){
             } else {
                 $('.wizard > .steps ul').removeClass('step-3');
             }
-            return true; 
+						if ( newIndex === 3 ) {
+                $('.wizard > .steps ul').addClass('step-4');
+            } else {
+                $('.wizard > .steps ul').removeClass('step-4');
+            }
+            return true;
         },
         labels: {
             finish: "Submit",
