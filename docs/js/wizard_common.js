@@ -31,7 +31,7 @@ $(document).ready(function() {
     selected: 0,
     keyNavigation: false,
     theme: 'default',
-    transitionEffect: 'none',
+    transitionEffect: 'fade',
     transitionSpeed: 1200,
     showStepURLhash: true,
     toolbarSettings: {
