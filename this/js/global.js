@@ -17,7 +17,7 @@
                 var current = index + 1;
                 if (current > 1) {
                     var val = parseInt(progressBar.text());
-                    val += 25;
+                    val += 30;
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
@@ -29,7 +29,7 @@
                 var current = index - 1;
                 if (current !== 1) {
                     var val = parseInt(progressBar.text());
-                    val -= 25;
+                    val -= 30;
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
