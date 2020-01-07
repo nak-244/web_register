@@ -15,11 +15,6 @@ $(function(){
             } else {
                 $('.wizard > .steps ul').removeClass('step-3');
             }
-						if ( newIndex === 3 ) {
-                $('.wizard > .steps ul').addClass('step-4');
-            } else {
-                $('.wizard > .steps ul').removeClass('step-4');
-            }
             return true;
         },
         labels: {
