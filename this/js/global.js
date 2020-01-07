@@ -2,10 +2,10 @@
     'use strict';
     /*[ Wizard Config ]
         ===========================================================*/
-    
+
     try {
-    
-    
+
+
         $("#js-wizard-form").bootstrapWizard({
             'tabClass' : 'nav-tab',
             'nextSelector': '.btn-next',
@@ -17,11 +17,11 @@
                 var current = index + 1;
                 if (current > 1) {
                     var val = parseInt(progressBar.text());
-                    val += 30;
+                    val += 50;
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
-    
+
             },
             'onPrevious' : function(tab, navigation, index) {
                 var progressBar = $('#js-progress').find('.progress-bar');
@@ -29,15 +29,15 @@
                 var current = index - 1;
                 if (current !== 1) {
                     var val = parseInt(progressBar.text());
-                    val -= 30;
+                    val -= 50;
                     progressBar.css('width', val+ '%');
                     progressVal.text(val+'%');
                 }
-    
+
             }
-    
+
         });
-    
+
     }
     catch (e) {
         console.log(e)
