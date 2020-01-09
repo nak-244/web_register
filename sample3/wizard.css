@@ -1,7 +1,8 @@
-.wizard > .steps {
-  display: none!important;
+.wizard>.steps {
+  display: none !important;
 }
 
+/* ラジオボタンカスタマイズ */
 .selectradio {
   list-style: none;
   margin: 0;

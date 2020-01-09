@@ -192,7 +192,7 @@
 
 .wizard > .content > .body input[type="checkbox"]
 {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .wizard > .content > .body input.error
