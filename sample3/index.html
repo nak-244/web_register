@@ -67,17 +67,6 @@
         </div>
       </section>
 
-      <script>
-        $(function() {
-          $.fn.autoKana('#name1', '#namekana1', {
-            katakana: true
-          });
-          $.fn.autoKana('#name2', '#namekana2', {
-            katakana: true
-          });
-        });
-      </script>
-
       <h1>性別</h1>
       <section>
         <div>
@@ -280,7 +269,7 @@
             </div>
             <div class="col-6 col-md-6 my-3">
               <span class="small">郵便番号<br>
-              <a href="https://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号がわからない場合</a></span>
+                <a href="https://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号がわからない場合</a></span>
               <div class="input-group ">
                 <input type="text" class="form-control" placeholder="1600022" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
               </div>
@@ -328,6 +317,18 @@
       transitionEffect: "slideLeft",
     });
   };
+</script>
+
+
+<script>
+  $(function() {
+    $.fn.autoKana('#name1', '#namekana1', {
+      katakana: true
+    });
+    $.fn.autoKana('#name2', '#namekana2', {
+      katakana: true
+    });
+  });
 </script>
 
 </html>
