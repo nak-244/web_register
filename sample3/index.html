@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="wizard.css">
   <script src="js/jquery.steps.js"></script>
   <script src="js/jquery.zip2addr.js"></script>
+  <script src="js/jquery.autoKana.js"></script>
   <!-- 追加 -->
 </head>
 
@@ -34,54 +35,48 @@
         <div>
           <div class="row">
             <div class="col-md-12">
-              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名(漢字)</h3>
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名</h3>
             </div>
-            <div class="col-12 col-md-6 my-3">
-              <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">姓</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large">
+            <!-- 漢字 -->
+            <div class="col-6 col-md-6 my-3">
+              姓（漢字）
+              <div class="input-group ">
+                <input type="text" class="form-control" id="name1">
               </div>
             </div>
-            <div class="col-12 col-md-6 my-3">
-              <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">名</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large">
+            <div class="col-6 col-md-6 my-3">
+              名（漢字）
+              <div class="input-group ">
+                <input type="text" class="form-control" id="name2">
+              </div>
+            </div>
+            <!-- フリガナ -->
+            <div class="col-6 col-md-6 my-3">
+              姓（フリガナ）
+              <div class="input-group ">
+                <input type="text" class="form-control" id="namekana1">
+              </div>
+            </div>
+            <div class="col-6 col-md-6 my-3">
+              名（フリガナ）
+              <div class="input-group ">
+                <input type="text" class="form-control" id="namekana2">
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <h1>氏名(フリガナ)</h1>
-      <section>
-        <div>
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名(カナ)</h3>
-            </div>
-            <div class="col-12 col-md-6 my-3">
-              <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">姓</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large">
-              </div>
-            </div>
-            <div class="col-12 col-md-6 my-3">
-              <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">名</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Large">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <script>
+        $(function() {
+          $.fn.autoKana('#name1', '#namekana1', {
+            katakana: true
+          });
+          $.fn.autoKana('#name2', '#namekana2', {
+            katakana: true
+          });
+        });
+      </script>
 
       <h1>性別</h1>
       <section>
@@ -268,8 +263,8 @@
               <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　メールアドレス</h3>
             </div>
             <div class="col-12 col-md-12 my-3">
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" aria-label="Large">
+              <div class="input-group ">
+                <input type="text" class="form-control">
               </div>
             </div>
           </div>
@@ -283,16 +278,16 @@
             <div class="col-md-12">
               <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　住所</h3>
             </div>
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-6 col-md-6 my-3">
               郵便番号
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" aria-label="Large" placeholder="1600022" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" >
+              <div class="input-group ">
+                <input type="text" class="form-control" placeholder="1600022" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
               </div>
             </div>
             <div class="col-12 col-md-8 my-3">
               郵便番号を入力すると自動反映されます
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" aria-label="Large" placeholder="東京都新宿区新宿" id="住所">
+              <div class="input-group ">
+                <input type="text" class="form-control" placeholder="東京都新宿区新宿" id="住所">
               </div>
             </div>
           </div>
