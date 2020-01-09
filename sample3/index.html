@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="wizard.css">
   <script src="js/jquery.steps.js"></script>
+  <script src="js/jquery.zip2addr.js"></script>
   <!-- 追加 -->
 </head>
 
@@ -287,7 +288,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-lg">郵便番号</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Large" placeholder="1600022">
+                <input type="text" class="form-control" aria-label="Large" placeholder="1600022" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" >
               </div>
             </div>
             <div class="col-12 col-md-8 my-3">
@@ -296,7 +297,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-lg">市区町村</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Large" placeholder="東京都新宿区新宿">
+                <input type="text" class="form-control" aria-label="Large" placeholder="東京都新宿区新宿" id="住所">
               </div>
             </div>
           </div>
