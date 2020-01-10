@@ -31,9 +31,9 @@
     </div>
 
     <!-- 吹き出しスタート -->
-
+<div id="list">
     <!-- 名前 -->
-    <div id="name">
+    <div id="name" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -91,7 +91,7 @@
     </div>
 
     <!-- 性別 -->
-    <div id="gender">
+    <div id="gender" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -137,7 +137,7 @@
     </div>
 
     <!-- 生年月日 -->
-    <div id="birth">
+    <div id="birth" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -306,7 +306,7 @@
     </div>
 
     <!-- メールアドレス -->
-    <div id="mail">
+    <div id="mail" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -342,7 +342,7 @@
     </div>
 
     <!-- 住所 -->
-    <div id="address">
+    <div id="address" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -388,7 +388,7 @@
     </div>
 
     <!-- 希望職種 -->
-    <div id="job">
+    <div id="job" class="chat">
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -444,6 +444,8 @@
       </div>
     </div>
 
+</div>
+
   </div>
 </body>
 
@@ -456,6 +458,47 @@
       katakana: true
     });
   });
+</script>
+
+<script>
+$(function(){
+
+	//分割したい個数を入力
+	var division = 1;
+
+	//要素の数を数える
+	var divlength = $('#list .li').length;
+	//分割数で割る
+	dlsizePerResult = divlength / division;
+	//分割数 刻みで後ろにmorelinkを追加する
+	for(i=1;i<=dlsizePerResult;i++){
+		$('#list .li').eq(division*i-1)
+                .after('<span class="morelink link'+i+'">続きを読む</span>');
+	}
+	//最初のli（分割数）と、morelinkを残して他を非表示
+	$('#list .li,.morelink').hide();
+	for(j=0;j<division;j++){
+		$('#list .li').eq(j).show();
+	}
+	$('.morelink.link1').show();
+
+	//morelinkにクリック時の動作
+	$('.morelink').click(function(){
+		//何個目のmorelinkがクリックされたかをカウント
+		index = $(this).index('.morelink');
+		//(クリックされたindex +2) * 分割数 = 表示数
+		for(k=0;k<(index+2)*division;k++){
+			$('#list .li').eq(k).fadeIn();
+		}
+
+		//一旦全てのmorelink削除
+		$('.morelink').hide();
+		//次のmorelink(index+1)を表示
+		$('.morelink').eq(index+1).show();
+
+	});
+
+});
 </script>
 
 </html>
