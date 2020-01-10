@@ -467,18 +467,19 @@ $(function(){
 	var division = 1;
 
 	//要素の数を数える
-	var divlength = $('#list .li').length;
+	var divlength = $('#list .chat').length;
 	//分割数で割る
 	dlsizePerResult = divlength / division;
 	//分割数 刻みで後ろにmorelinkを追加する
 	for(i=1;i<=dlsizePerResult;i++){
-		$('#list .li').eq(division*i-1)
-                .after('<span class="morelink link'+i+'">続きを読む</span>');
+		$('#list .chat').eq(division*i-1)
+                // .after('<span class="morelink link'+i+'">続きを読む</span>');
+                .after('<button type="button" class="float-right btn btn-primary btn-sm morelink link'+i+'">続きを読む</button>');
 	}
 	//最初のli（分割数）と、morelinkを残して他を非表示
-	$('#list .li,.morelink').hide();
+	$('#list .chat,.morelink').hide();
 	for(j=0;j<division;j++){
-		$('#list .li').eq(j).show();
+		$('#list .chat').eq(j).show();
 	}
 	$('.morelink.link1').show();
 
@@ -488,7 +489,7 @@ $(function(){
 		index = $(this).index('.morelink');
 		//(クリックされたindex +2) * 分割数 = 表示数
 		for(k=0;k<(index+2)*division;k++){
-			$('#list .li').eq(k).fadeIn();
+			$('#list .chat').eq(k).fadeIn();
 		}
 
 		//一旦全てのmorelink削除
