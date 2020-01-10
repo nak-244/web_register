@@ -6,6 +6,13 @@
 .custom-select {
   width:auto!important;
 }
+
+@media only screen and (max-width: 750px) {
+  .custom-select {
+    width:100%!important;
+  }
+}
+
 /*--------------------
  吹き出しを作る
 --------------------*/
