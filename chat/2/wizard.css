@@ -1,51 +1,96 @@
-.wizard>.steps {
-  display: none !important;
+/*--------------------
+ 吹き出しを作る
+--------------------*/
+.balloon {
+margin-bottom: 2em;
+position: relative;
 }
-
-/* ラジオボタンカスタマイズ */
-.selectradio {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.balloon:before,.balloon:after {
+clear: both;
+content: "";
+display: block;
 }
-
-.selectradio .selectradio-item {
-  margin: 5px 0;
-  padding: 0;
+.balloon figure {
+width: 60px;
+height: 60px;
 }
-
-.selectradio input[type="radio"] {
-  display: none;
+.balloon-image-left {
+float: left;
+margin-right: 20px;
 }
-
-.selectradio input[type="radio"]:checked+label {
-  background: #C0E8FF;
-  color: #333333;
-  border: 2px solid #28A7E1;
+.balloon-image-right {
+float: right;
+margin-left: 20px;
 }
-
-.selectradio .selectradio-label {
-  display: block;
-  width: 100%;
-  height: 45px;
-  text-align: center;
-  line-height: 45px;
-  padding: 0 5px;
-  cursor: pointer;
-  color: #333333;
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 5px;
-  background: #e9ecef;
-  transition: 0.5s;
-  border-radius: 4px;
+.balloon figure img {
+width: 100%;
+height: 100%;
+border: 1px solid #aaa;
+border-radius: 50%;
+margin: 0;
 }
-
-.selectradio.selectradio-inline .selectradio-item {
-  display: inline-block;
+.balloon-image-description {
+padding: 5px 0 0;
+font-size: 10px;
+text-align: center;
 }
-
-.selectradio.selectradio-inline .selectradio-label {
-  display: inline-block;
-  /* width: 100px; */
-  width: 200px;
+.balloon-text-right,.balloon-text-left {
+position: relative;
+padding: 10px;
+border: 1px solid;
+border-radius: 10px;
+max-width: -webkit-calc(100% - 120px);
+max-width: calc(100% - 120px);
+display: inline-block;
+}
+.balloon-text-right {
+border-color: #aaa;
+}
+.balloon-text-left {
+border-color: #aaa;
+}
+.balloon-text-right {
+float: left;
+}
+.balloon-text-left {
+float: right;
+}
+.balloon p {
+margin: 0 0 20px;
+}
+.balloon p:last-child {
+margin-bottom: 0;
+}
+/* 三角部分 */
+.balloon-text-right:before {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-right: 10px solid #aaa;
+top: 15px;
+left: -20px;
+}
+.balloon-text-right:after {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-right: 10px solid #fff;
+top: 15px;
+left: -19px;
+}
+.balloon-text-left:before {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-left: 10px solid #aaa;
+top: 15px;
+right: -20px;
+}
+.balloon-text-left:after {
+position: absolute;
+content: '';
+border: 10px solid transparent;
+border-left: 10px solid #fff;
+top: 15px;
+right: -19px;
 }
