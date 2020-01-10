@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="#">
+  <title>EFO</title>
+  <meta name="description" content="EFOのsampleを作ってみる">
+  <link rel="stylesheet" href="aquamarine.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- JavaScript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- 追加 -->
+  <link rel="stylesheet" href="assets/css/jquery.steps.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="wizard.css">
+  <script src="js/jquery.steps.js"></script>
+  <script src="js/jquery.zip2addr.js"></script>
+  <script src="js/jquery.autoKana.js"></script>
+  <!-- 追加 -->
+</head>
+
+<body>
+  <div class="container">
+    <!-- Wizard html -->
+
+    <div id="wizard">
+
+      <h1>氏名(漢字)</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　氏名</h3>
+            </div>
+            <!-- 漢字 -->
+            <div class="col-6 col-md-6 my-3">
+              <span class="small">姓（漢字）</span>
+              <div class="input-group ">
+                <input type="text" class="form-control" id="name1">
+              </div>
+            </div>
+            <div class="col-6 col-md-6 my-3">
+              <span class="small">名（漢字）</span>
+              <div class="input-group ">
+                <input type="text" class="form-control" id="name2">
+              </div>
+            </div>
+            <!-- フリガナ -->
+            <div class="col-6 col-md-6 my-3">
+              <span class="small">姓（フリガナ）</span>
+              <div class="input-group ">
+                <input type="text" class="form-control" id="namekana1">
+              </div>
+            </div>
+            <div class="col-6 col-md-6 my-3">
+              <span class="small">名（フリガナ）</span>
+              <div class="input-group ">
+                <input type="text" class="form-control" id="namekana2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>性別</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　性別</h3>
+            </div>
+            <div class="col-md-6 col-12 text-center my-3">
+              <ul class="selectradio selectradio-inline">
+                <li class="selectradio-item">
+                  <input type="radio" name="radiogroup2" id="select2-1" value="1">
+                  <label for="select2-1" class="selectradio-label">男性</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-12 text-center my-3">
+              <ul class="selectradio selectradio-inline">
+                <li class="selectradio-item">
+                  <input type="radio" name="radiogroup2" id="select2-2" value="2">
+                  <label for="select2-2" class="selectradio-label">女性</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>生年月日</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　生年月日</h3>
+            </div>
+            <div class="col-md-4 col-12 text-center my-3">
+              <select name="year" class="custom-select">
+                <option value="">年</option>
+                <option value="1940">1940年</option>
+                <option value="1941">1941年</option>
+                <option value="1942">1942年</option>
+                <option value="1943">1943年</option>
+                <option value="1944">1944年</option>
+                <option value="1945">1945年</option>
+                <option value="1946">1946年</option>
+                <option value="1947">1947年</option>
+                <option value="1948">1948年</option>
+                <option value="1949">1949年</option>
+                <option value="1950">1950年</option>
+                <option value="1951">1951年</option>
+                <option value="1952">1952年</option>
+                <option value="1953">1953年</option>
+                <option value="1954">1954年</option>
+                <option value="1955">1955年</option>
+                <option value="1956">1956年</option>
+                <option value="1957">1957年</option>
+                <option value="1958">1958年</option>
+                <option value="1959">1959年</option>
+                <option value="1960">1960年</option>
+                <option value="1961">1961年</option>
+                <option value="1962">1962年</option>
+                <option value="1963">1963年</option>
+                <option value="1964">1964年</option>
+                <option value="1965">1965年</option>
+                <option value="1966">1966年</option>
+                <option value="1967">1967年</option>
+                <option value="1968">1968年</option>
+                <option value="1969">1969年</option>
+                <option value="1970">1970年</option>
+                <option value="1971">1971年</option>
+                <option value="1972">1972年</option>
+                <option value="1973">1973年</option>
+                <option value="1974">1974年</option>
+                <option value="1975">1975年</option>
+                <option value="1976">1976年</option>
+                <option value="1977">1977年</option>
+                <option value="1978">1978年</option>
+                <option value="1979">1979年</option>
+                <option value="1980">1980年</option>
+                <option value="1981">1981年</option>
+                <option value="1982">1982年</option>
+                <option value="1983">1983年</option>
+                <option value="1984">1984年</option>
+                <option value="1985">1985年</option>
+                <option value="1986">1986年</option>
+                <option value="1987">1987年</option>
+                <option value="1988">1988年</option>
+                <option value="1989">1989年</option>
+                <option value="1990">1990年</option>
+                <option value="1991">1991年</option>
+                <option value="1992">1992年</option>
+                <option value="1993">1993年</option>
+                <option value="1994">1994年</option>
+                <option value="1995">1995年</option>
+                <option value="1996">1996年</option>
+                <option value="1997">1997年</option>
+                <option value="1998">1998年</option>
+                <option value="1999">1999年</option>
+                <option value="2000">2000年</option>
+                <option value="2001">2001年</option>
+                <option value="2002">2002年</option>
+                <option value="2003">2003年</option>
+                <option value="2004">2004年</option>
+                <option value="2005">2005年</option>
+                <option value="2006">2006年</option>
+                <option value="2007">2007年</option>
+                <option value="2008">2008年</option>
+                <option value="2009">2009年</option>
+                <option value="2010">2010年</option>
+                <option value="2011">2011年</option>
+                <option value="2012">2012年</option>
+                <option value="2013">2013年</option>
+                <option value="2014">2014年</option>
+                <option value="2015">2015年</option>
+                <option value="2016">2016年</option>
+                <option value="2017">2017年</option>
+                <option value="2018">2018年</option>
+                <option value="2019">2019年</option>
+                <option value="2020">2020年</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-12 text-center my-3">
+              <select name="month" class="custom-select">
+                <option value="">月</option>
+                <option value="1">1月</option>
+                <option value="2">2月</option>
+                <option value="3">3月</option>
+                <option value="4">4月</option>
+                <option value="5">5月</option>
+                <option value="6">6月</option>
+                <option value="7">7月</option>
+                <option value="8">8月</option>
+                <option value="9">9月</option>
+                <option value="10">10月</option>
+                <option value="11">11月</option>
+                <option value="12">12月</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-12 text-center my-3">
+              <select name="day" class="custom-select">
+                <option value="">日</option>
+                <option value="1">1日</option>
+                <option value="2">2日</option>
+                <option value="3">3日</option>
+                <option value="4">4日</option>
+                <option value="5">5日</option>
+                <option value="6">6日</option>
+                <option value="7">7日</option>
+                <option value="8">8日</option>
+                <option value="9">9日</option>
+                <option value="10">10日</option>
+                <option value="11">11日</option>
+                <option value="12">12日</option>
+                <option value="13">13日</option>
+                <option value="14">14日</option>
+                <option value="15">15日</option>
+                <option value="16">16日</option>
+                <option value="17">17日</option>
+                <option value="18">18日</option>
+                <option value="19">19日</option>
+                <option value="20">20日</option>
+                <option value="21">21日</option>
+                <option value="22">22日</option>
+                <option value="23">23日</option>
+                <option value="24">24日</option>
+                <option value="25">25日</option>
+                <option value="26">26日</option>
+                <option value="27">27日</option>
+                <option value="28">28日</option>
+                <option value="29">29日</option>
+                <option value="30">30日</option>
+                <option value="31">31日</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>メールアドレス</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　メールアドレス</h3>
+            </div>
+            <div class="col-12 col-md-12 my-3">
+              <div class="input-group ">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>住所</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　住所</h3>
+            </div>
+            <div class="col-6 col-md-4 my-3">
+              <span class="small">郵便番号</span>
+              <div class="input-group ">
+                <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
+              </div>
+            </div>
+            <div class="col-6 col-md-6 my-3">
+              <span class="small">&nbsp;</span><br>
+              <a href="https://www.post.japanpost.jp/zipcode/" target="_blank" class="btn btn-outline-primary btn-sm">郵便番号検索</a>
+            </div>
+            <div class="col-12 col-md-10 my-3">
+              <span class="small">郵便番号を入力すると自動反映されます</span>
+              <div class="input-group ">
+                <input type="text" class="form-control" id="住所">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h1>希望職種</h1>
+      <section>
+        <div>
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <h3 class="border-bottom border-gray pb-2"><span class="badge badge-danger">必須</span>　希望職種</h3>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">販売/飲食/営業/イベント系</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">軽作業/倉庫/物流系・製造系</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">コールセンター/事務系</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">ＩＴ/技術系</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                <label class="custom-control-label" for="customCheck5">医療/介護/福祉系</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                <label class="custom-control-label" for="customCheck6">その他</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</body>
+
+<script>
+  $().ready(function() {
+    initWizard();
+  });
+  /** initialize */
+  var initWizard = () => {
+    $("#wizard").steps({
+      headerTag: "h1",
+      bodyTag: "section",
+      transitionEffect: "slideLeft",
+    });
+  };
+</script>
+
+
+<script>
+  $(function() {
+    $.fn.autoKana('#name1', '#namekana1', {
+      katakana: true
+    });
+    $.fn.autoKana('#name2', '#namekana2', {
+      katakana: true
+    });
+  });
+</script>
+
+</html>
