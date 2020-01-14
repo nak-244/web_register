@@ -447,8 +447,6 @@
     </div>
 
     <!-- ここから -->
-
-
     <ul class="list">
         <li>item1</li>
         <li>item2</li>
@@ -475,9 +473,8 @@
     <div class="more">
         <button>もっと見る</button>
     </div>
-
-
     <!-- ここまで -->
+    
   </div>
 </body>
 
@@ -493,15 +490,16 @@
 </script>
 
 <script>
-var moreNum = 1;
-$('.list li:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');
-$('.more').on('click', function() {
-  $('.list li.is-hidden').slice(0, moreNum).removeClass('is-hidden');
-  if ($('.list li.is-hidden').length == 0) {
-    $('.more').fadeOut();
-  }
-});
+  var moreNum = 1;
+  $('.list li:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');
+  $('.more').on('click', function() {
+    $('.list li.is-hidden').slice(0, moreNum).removeClass('is-hidden');
+    if ($('.list li.is-hidden').length == 0) {
+      $('.more').fadeOut();
+    }
+  });
 </script>
+
 
 
 </html>
