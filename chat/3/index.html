@@ -448,7 +448,7 @@
 
     <!-- ここから -->
 
-    
+
     <ul class="list">
         <li>item1</li>
         <li>item2</li>
@@ -494,10 +494,10 @@
 
 <script>
 var moreNum = 1;
-$('#list div.chat:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');
+$('.list li:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');
 $('.more').on('click', function() {
-  $('#list div.chat.is-hidden').slice(0, moreNum).removeClass('is-hidden');
-  if ($('#list div.chat.is-hidden').length == 0) {
+  $('.list li.is-hidden').slice(0, moreNum).removeClass('is-hidden');
+  if ($('.list li.is-hidden').length == 0) {
     $('.more').fadeOut();
   }
 });
