@@ -474,7 +474,7 @@ $(function(){
 	for(i=1;i<=dlsizePerResult;i++){
 		$('#list .chat').eq(division*i-1)
                 // .after('<span class="morelink link'+i+'">続きを読む</span>');
-                .after('<button type="button" class="float-right btn btn-primary btn-sm morelink link py-4'+i+'">続きを読む</button>');
+                .after('<button type="button" class="float-right btn btn-primary btn-sm morelink link'+i+'">続きを読む</button>');
 	}
 	//最初のli（分割数）と、morelinkを残して他を非表示
 	$('#list .chat,.morelink').hide();
