@@ -36,6 +36,20 @@
       });
     });
   </script>
+  <script>
+    $(function() {
+      $('a[href^="#"]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
+    });
+  </script>
   <!-- 追加 -->
 </head>
 
@@ -110,7 +124,7 @@
     <p class="text-right my-3 readmore-button-box"><a href="#1">次へ</a></p>
     <div id="1" class="readmore-area">
 
-    <!-- 性別 -->
+      <!-- 性別 -->
       <div class="balloon">
         <figure class="balloon-image-left">
           <img src="assets/img/sigotora.png" alt="しごとら">
@@ -157,7 +171,7 @@
       <p class="text-right my-3 readmore-button-box"><a href="#2">次へ</a></p>
       <div id="2" class="readmore-area">
 
-      <!-- 生年月日 -->
+        <!-- 生年月日 -->
         <div class="balloon">
           <figure class="balloon-image-left">
             <img src="assets/img/sigotora.png" alt="しごとら">
@@ -327,153 +341,153 @@
         <p class="text-right my-3 readmore-button-box"><a href="#3">次へ</a></p>
         <div id="3" class="readmore-area">
 
-      <!-- メールアドレス -->
-        <div class="balloon">
-          <figure class="balloon-image-left">
-            <img src="assets/img/sigotora.png" alt="しごとら">
-            <figcaption class="balloon-image-description">
-              しごとら
-            </figcaption>
-          </figure>
-          <div class="balloon-text-right">
-            <p>ありがとうございます！<br>
-              次に、あなたのメールアドレスお聞かせください。</p>
+          <!-- メールアドレス -->
+          <div class="balloon">
+            <figure class="balloon-image-left">
+              <img src="assets/img/sigotora.png" alt="しごとら">
+              <figcaption class="balloon-image-description">
+                しごとら
+              </figcaption>
+            </figure>
+            <div class="balloon-text-right">
+              <p>ありがとうございます！<br>
+                次に、あなたのメールアドレスお聞かせください。</p>
+            </div>
           </div>
-        </div>
-        <!-- メールアドレス -->
-        <div class="balloon">
-          <figure class="balloon-image-right">
-            <img src="assets/img/user.png" alt="登録ユーザー">
-            <figcaption class="balloon-image-description">
-              あなた
-            </figcaption>
-          </figure>
-          <div class="balloon-text-left">
-            <div class="row">
-              <!-- メールアドレス -->
-              <div class="col-12 col-md-12">
-                <span class="small">メールアドレス</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" style="width:600px">
+          <!-- メールアドレス -->
+          <div class="balloon">
+            <figure class="balloon-image-right">
+              <img src="assets/img/user.png" alt="登録ユーザー">
+              <figcaption class="balloon-image-description">
+                あなた
+              </figcaption>
+            </figure>
+            <div class="balloon-text-left">
+              <div class="row">
+                <!-- メールアドレス -->
+                <div class="col-12 col-md-12">
+                  <span class="small">メールアドレス</span>
+                  <div class="input-group ">
+                    <input type="text" class="form-control" style="width:600px">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <p class="text-right my-3 readmore-button-box"><a href="#4">次へ</a></p>
-        <div id="4" class="readmore-area">
+          <p class="text-right my-3 readmore-button-box"><a href="#4">次へ</a></p>
+          <div id="4" class="readmore-area">
 
-      <!-- 住所 -->
-        <div class="balloon">
-          <figure class="balloon-image-left">
-            <img src="assets/img/sigotora.png" alt="しごとら">
-            <figcaption class="balloon-image-description">
-              しごとら
-            </figcaption>
-          </figure>
-          <div class="balloon-text-right">
-            <p>ありがとうございます！<br>
-              もう少しだけ質問にお付き合いください。<br>
-              現在お住まいのご住所を入力ください。番地までのご入力は不要です。<br><br>
-              郵便番号を入力いただくと自動反映されますのでご活用ください。<br>
-              ※お住まいから最寄の当社支店と連携します！
-            </p>
-          </div>
-        </div>
-        <!-- 住所 -->
-        <div class="balloon">
-          <figure class="balloon-image-right">
-            <img src="assets/img/user.png" alt="登録ユーザー">
-            <figcaption class="balloon-image-description">
-              あなた
-            </figcaption>
-          </figure>
-          <div class="balloon-text-left">
-            <div class="row">
-              <!-- 住所 -->
-              <div class="col-6 col-md-4">
-                <span class="small">郵便番号</span>
-                <div class="input-group ">
-                  <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
-                </div>
+            <!-- 住所 -->
+            <div class="balloon">
+              <figure class="balloon-image-left">
+                <img src="assets/img/sigotora.png" alt="しごとら">
+                <figcaption class="balloon-image-description">
+                  しごとら
+                </figcaption>
+              </figure>
+              <div class="balloon-text-right">
+                <p>ありがとうございます！<br>
+                  もう少しだけ質問にお付き合いください。<br>
+                  現在お住まいのご住所を入力ください。番地までのご入力は不要です。<br><br>
+                  郵便番号を入力いただくと自動反映されますのでご活用ください。<br>
+                  ※お住まいから最寄の当社支店と連携します！
+                </p>
               </div>
-              <div class="col-12 col-md-12">
-                <span class="small">郵便番号を入力すると自動反映されます</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" id="住所">
+            </div>
+            <!-- 住所 -->
+            <div class="balloon">
+              <figure class="balloon-image-right">
+                <img src="assets/img/user.png" alt="登録ユーザー">
+                <figcaption class="balloon-image-description">
+                  あなた
+                </figcaption>
+              </figure>
+              <div class="balloon-text-left">
+                <div class="row">
+                  <!-- 住所 -->
+                  <div class="col-6 col-md-4">
+                    <span class="small">郵便番号</span>
+                    <div class="input-group ">
+                      <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <span class="small">郵便番号を入力すると自動反映されます</span>
+                    <div class="input-group ">
+                      <input type="text" class="form-control" id="住所">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <p class="text-right my-3 readmore-button-box"><a href="#5">次へ</a></p>
-        <div id="5" class="readmore-area">
+            <p class="text-right my-3 readmore-button-box"><a href="#5">次へ</a></p>
+            <div id="5" class="readmore-area">
 
-      <!-- 希望職種 -->
-      <div id="job">
-        <div class="balloon">
-          <figure class="balloon-image-left">
-            <img src="assets/img/sigotora.png" alt="しごとら">
-            <figcaption class="balloon-image-description">
-              しごとら
-            </figcaption>
-          </figure>
-          <div class="balloon-text-right">
-            <p>これで最後の質問になります。<br>
-              ご希望の職種をすべて選択していただき、「応募する」ボタンを押してください。</p>
-          </div>
-        </div>
-        <!-- 希望職種 -->
-        <div class="balloon">
-          <figure class="balloon-image-right">
-            <img src="assets/img/user.png" alt="登録ユーザー">
-            <figcaption class="balloon-image-description">
-              あなた
-            </figcaption>
-          </figure>
-          <div class="balloon-text-left">
-            <div class="row">
               <!-- 希望職種 -->
-              <div class="col-md-12 col-12 mx-2">
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">販売/飲食/営業/イベント系</label>
+              <div id="job">
+                <div class="balloon">
+                  <figure class="balloon-image-left">
+                    <img src="assets/img/sigotora.png" alt="しごとら">
+                    <figcaption class="balloon-image-description">
+                      しごとら
+                    </figcaption>
+                  </figure>
+                  <div class="balloon-text-right">
+                    <p>これで最後の質問になります。<br>
+                      ご希望の職種をすべて選択していただき、「応募する」ボタンを押してください。</p>
+                  </div>
                 </div>
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">軽作業/倉庫/物流系・製造系</label>
-                </div>
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">コールセンター/事務系</label>
-                </div>
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label" for="customCheck4">ＩＴ/技術系</label>
-                </div>
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck5">
-                  <label class="custom-control-label" for="customCheck5">医療/介護/福祉系</label>
-                </div>
-                <div class="custom-control custom-checkbox p-2">
-                  <input type="checkbox" class="custom-control-input" id="customCheck6">
-                  <label class="custom-control-label" for="customCheck6">その他</label>
+                <!-- 希望職種 -->
+                <div class="balloon">
+                  <figure class="balloon-image-right">
+                    <img src="assets/img/user.png" alt="登録ユーザー">
+                    <figcaption class="balloon-image-description">
+                      あなた
+                    </figcaption>
+                  </figure>
+                  <div class="balloon-text-left">
+                    <div class="row">
+                      <!-- 希望職種 -->
+                      <div class="col-md-12 col-12 mx-2">
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">販売/飲食/営業/イベント系</label>
+                        </div>
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck2">
+                          <label class="custom-control-label" for="customCheck2">軽作業/倉庫/物流系・製造系</label>
+                        </div>
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck3">
+                          <label class="custom-control-label" for="customCheck3">コールセンター/事務系</label>
+                        </div>
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck4">
+                          <label class="custom-control-label" for="customCheck4">ＩＴ/技術系</label>
+                        </div>
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck5">
+                          <label class="custom-control-label" for="customCheck5">医療/介護/福祉系</label>
+                        </div>
+                        <div class="custom-control custom-checkbox p-2">
+                          <input type="checkbox" class="custom-control-input" id="customCheck6">
+                          <label class="custom-control-label" for="customCheck6">その他</label>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
 
 
 
-    </div> <!-- id=5 -->    
-    </div> <!-- id=4 -->
-    </div> <!-- id=3 -->
-    </div> <!-- id=2 -->
+            </div> <!-- id=5 -->
+          </div> <!-- id=4 -->
+        </div> <!-- id=3 -->
+      </div> <!-- id=2 -->
     </div> <!-- id=1 -->
   </div>
 </body>
