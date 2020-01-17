@@ -166,3 +166,20 @@ right: -19px;
 		pointer-events: none;
 	}
 }
+
+
+.readmore-button-box a {
+   background-color: #cc0000; /* ボタンの色(濃い赤) */
+   color: white;              /* ボタンの文字色(白) */
+   border-radius: 18px;       /* 角丸の半径 */
+   padding: 0.5em 2.5em;;     /* 内側の余白 */
+   display: inline-block;     /* ボタン全体をクリック可能に */
+   font-weight: bold;         /* ボタンの文字を太字に */
+   font-size: 1.25em;         /* ボタンの文字サイズ */
+}
+.readmore-button-box a:hover {
+   background-color: red;     /* ボタンにマウスが乗ったら明るい赤色に変化 */
+}
+.readmore-area {
+   display: none;   /* デフォルトでは非表示にしておく */
+}
