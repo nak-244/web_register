@@ -18,21 +18,23 @@
   <script src="js/jquery.zip2addr.js"></script>
   <script src="js/jquery.autoKana.js"></script>
   <script type="text/javascript">
-  function showMoreJq(btn) {
-     var targetId = btn.getAttribute("href"); // 表示対象のid名をhref属性値から得る
-     $(targetId).slideDown("slow");           // 表示対象をアニメーション効果と共に表示
-     $(btn.parentNode).slideUp("fast");       // 続きを読むボタンをアニメーション効果と共に消す
-     return false;                            // リンクとして機能しないようfalseを返す
-  }
+    function showMoreJq(btn) {
+      var targetId = btn.getAttribute("href"); // 表示対象のid名をhref属性値から得る
+      $(targetId).slideDown("slow"); // 表示対象をアニメーション効果と共に表示
+      $(btn.parentNode).slideUp("fast"); // 続きを読むボタンをアニメーション効果と共に消す
+      return false; // リンクとして機能しないようfalseを返す
+    }
   </script>
   <script type="text/javascript">
-  // ▼ページ読み込み直後に実行するスクリプト
-  $(function(){
-     // ▽「続きのコンテンツ」ボックスを非表示にする
-     $(".readmore-area").hide();
-     // ▽「続きを読む」ボタンがクリックされた際の処理を割り当てる
-     $(".readmore-button-box a").click( function() { return showMoreJq(this); } );
-  });
+    // ▼ページ読み込み直後に実行するスクリプト
+    $(function() {
+      // ▽「続きのコンテンツ」ボックスを非表示にする
+      $(".readmore-area").hide();
+      // ▽「続きを読む」ボタンがクリックされた際の処理を割り当てる
+      $(".readmore-button-box a").click(function() {
+        return showMoreJq(this);
+      });
+    });
   </script>
   <!-- 追加 -->
 </head>
@@ -49,112 +51,113 @@
 
     <!-- 吹き出しスタート -->
 
-      <!-- 名前 -->
-        <div class="balloon">
-          <figure class="balloon-image-left">
-            <img src="assets/img/sigotora.png" alt="しごとら">
-            <figcaption class="balloon-image-description">
-              しごとら
-            </figcaption>
-          </figure>
-          <div class="balloon-text-right">
-            <p>初めまして♪<br>
-              これからチャット形式で、カンタンな質問を6つさせていただきます！<br>
-              まず、あなたのお名前を教えて下さい。</p>
-          </div>
-        </div>
-        <!-- 名前入力 -->
-        <div class="balloon">
-          <figure class="balloon-image-right">
-            <img src="assets/img/user.png" alt="登録ユーザー">
-            <figcaption class="balloon-image-description">
-              あなた
-            </figcaption>
-          </figure>
-          <div class="balloon-text-left">
-            <div class="row">
-              <!-- 漢字 -->
-              <div class="col-12 col-md-6">
-                <span class="small">姓（漢字）</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" id="name1">
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <span class="small">名（漢字）</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" id="name2">
-                </div>
-              </div>
+    <!-- 名前 -->
+    <div class="balloon">
+      <figure class="balloon-image-left">
+        <img src="assets/img/sigotora.png" alt="しごとら">
+        <figcaption class="balloon-image-description">
+          しごとら
+        </figcaption>
+      </figure>
+      <div class="balloon-text-right">
+        <p>初めまして♪<br>
+          これからチャット形式で、カンタンな質問を6つさせていただきます！<br>
+          まず、あなたのお名前を教えて下さい。</p>
+      </div>
+    </div>
+    <!-- 名前入力 -->
+    <div class="balloon">
+      <figure class="balloon-image-right">
+        <img src="assets/img/user.png" alt="登録ユーザー">
+        <figcaption class="balloon-image-description">
+          あなた
+        </figcaption>
+      </figure>
+      <div class="balloon-text-left">
+        <div class="row">
+          <!-- 漢字 -->
+          <div class="col-12 col-md-6">
+            <span class="small">姓（漢字）</span>
+            <div class="input-group ">
+              <input type="text" class="form-control" id="name1">
             </div>
-            <div class="row mt-4">
-              <!-- フリガナ -->
-              <div class="col-12 col-md-6">
-                <span class="small">姓（フリガナ）</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" id="namekana1">
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <span class="small">名（フリガナ）</span>
-                <div class="input-group ">
-                  <input type="text" class="form-control" id="namekana2">
-                </div>
-              </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <span class="small">名（漢字）</span>
+            <div class="input-group ">
+              <input type="text" class="form-control" id="name2">
             </div>
           </div>
         </div>
-
-        <p class="text-right my-3 readmore-button-box"><a href="#1">次へ</a></p>
-
-      <!-- 性別 -->
-      <div id="1" class="readmore-area">
-        <div class="balloon">
-          <figure class="balloon-image-left">
-            <img src="assets/img/sigotora.png" alt="しごとら">
-            <figcaption class="balloon-image-description">
-              しごとら
-            </figcaption>
-          </figure>
-          <div class="balloon-text-right">
-            <p>ありがとうございます。承知いたしました。<br>
-              あなたの性別を教えて下さい。</p>
+        <div class="row mt-4">
+          <!-- フリガナ -->
+          <div class="col-12 col-md-6">
+            <span class="small">姓（フリガナ）</span>
+            <div class="input-group ">
+              <input type="text" class="form-control" id="namekana1">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <span class="small">名（フリガナ）</span>
+            <div class="input-group ">
+              <input type="text" class="form-control" id="namekana2">
+            </div>
           </div>
         </div>
-        <!-- 性別入力 -->
-        <div class="balloon">
-          <figure class="balloon-image-right">
-            <img src="assets/img/user.png" alt="登録ユーザー">
-            <figcaption class="balloon-image-description">
-              あなた
-            </figcaption>
-          </figure>
-          <div class="balloon-text-left">
-            <div class="row">
-              <!-- 性別 -->
-              <div class="col-md-6 col-12 text-center">
-                <ul class="selectradio selectradio-inline">
-                  <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-1" value="1">
-                    <label for="select2-1" class="selectradio-label">男性</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-12 text-center">
-                <ul class="selectradio selectradio-inline">
-                  <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-2" value="2">
-                    <label for="select2-2" class="selectradio-label">女性</label>
-                  </li>
-                </ul>
-              </div>
+      </div>
+    </div>
+
+    <p class="text-right my-3 readmore-button-box"><a href="#1">次へ</a></p>
+    <div id="1" class="readmore-area">
+
+    <!-- 性別 -->
+      <div class="balloon">
+        <figure class="balloon-image-left">
+          <img src="assets/img/sigotora.png" alt="しごとら">
+          <figcaption class="balloon-image-description">
+            しごとら
+          </figcaption>
+        </figure>
+        <div class="balloon-text-right">
+          <p>ありがとうございます。承知いたしました。<br>
+            あなたの性別を教えて下さい。</p>
+        </div>
+      </div>
+      <!-- 性別入力 -->
+      <div class="balloon">
+        <figure class="balloon-image-right">
+          <img src="assets/img/user.png" alt="登録ユーザー">
+          <figcaption class="balloon-image-description">
+            あなた
+          </figcaption>
+        </figure>
+        <div class="balloon-text-left">
+          <div class="row">
+            <!-- 性別 -->
+            <div class="col-md-6 col-12 text-center">
+              <ul class="selectradio selectradio-inline">
+                <li class="selectradio-item">
+                  <input type="radio" name="radiogroup2" id="select2-1" value="1">
+                  <label for="select2-1" class="selectradio-label">男性</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-12 text-center">
+              <ul class="selectradio selectradio-inline">
+                <li class="selectradio-item">
+                  <input type="radio" name="radiogroup2" id="select2-2" value="2">
+                  <label for="select2-2" class="selectradio-label">女性</label>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
+      <p class="text-right my-3 readmore-button-box"><a href="#2">次へ</a></p>
+      <div id="2" class="readmore-area">
+
       <!-- 生年月日 -->
-      <div id="birth">
         <div class="balloon">
           <figure class="balloon-image-left">
             <img src="assets/img/sigotora.png" alt="しごとら">
@@ -320,10 +323,11 @@
             </div>
           </div>
         </div>
-      </div>
+
+        <p class="text-right my-3 readmore-button-box"><a href="#3">次へ</a></p>
+        <div id="3" class="readmore-area">
 
       <!-- メールアドレス -->
-      <div id="mail">
         <div class="balloon">
           <figure class="balloon-image-left">
             <img src="assets/img/sigotora.png" alt="しごとら">
@@ -356,10 +360,11 @@
             </div>
           </div>
         </div>
-      </div>
+
+        <p class="text-right my-3 readmore-button-box"><a href="#4">次へ</a></p>
+        <div id="4" class="readmore-area">
 
       <!-- 住所 -->
-      <div id="address">
         <div class="balloon">
           <figure class="balloon-image-left">
             <img src="assets/img/sigotora.png" alt="しごとら">
@@ -402,7 +407,9 @@
             </div>
           </div>
         </div>
-      </div>
+
+        <p class="text-right my-3 readmore-button-box"><a href="#5">次へ</a></p>
+        <div id="5" class="readmore-area">
 
       <!-- 希望職種 -->
       <div id="job">
@@ -462,6 +469,12 @@
       </div>
 
 
+
+    </div> <!-- id=5 -->    
+    </div> <!-- id=4 -->
+    </div> <!-- id=3 -->
+    </div> <!-- id=2 -->
+    </div> <!-- id=1 -->
   </div>
 </body>
 
