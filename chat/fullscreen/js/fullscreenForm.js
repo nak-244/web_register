@@ -64,7 +64,7 @@
 	 */
 	FForm.prototype.options = {
 		// show progress bar
-		ctrlProgress : false,
+		ctrlProgress : true,
 		// show navigation dots
 		ctrlNavDots : true,
 		// show [current field]/[total fields] status
