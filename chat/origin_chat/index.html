@@ -52,7 +52,7 @@
   </script>
   <script>
     $(function() {
-      //始めにjQueryで送信ボタンを無効化する
+      //始めにjQueryでボタンを無効化する
       $('.send1').prop("disabled", true);
 
       //入力欄の操作時
@@ -79,28 +79,18 @@
   </script>
   <script>
     $(function() {
-      //始めにjQueryで送信ボタンを無効化する
-      $('.send2').prop("disabled", true);
-
+      //始めにjQueryでボタンを無効化する
+      $('#send2').prop("disabled", true);
       //入力欄の操作時
-      $('form input:required').change(function() {
-        //必須項目が空かどうかフラグ
-        let flag = true;
-        //必須項目をひとつずつチェック
-        $('form input:required').each(function(e) {
-          //もし必須項目が空なら
-          if ($('form input:required').eq(e).val() === "") {
-            flag = false;
-          }
-        });
-        //全て埋まっていたら
-        if (flag) {
-          //送信ボタンを復活
-          $('.send2').prop("disabled", false);
+      $(".send2").click(function() {
+        //ラジオボタンのどちらかがチェックされたら
+        if (this.checked) {
+          //ボタンを復活
+          $('#send2').prop("disabled", false);
         } else {
-          //送信ボタンを閉じる
-          $('.send2').prop("disabled", true);
-        }
+          //選択されるまではボタンを無効化
+          $('#send2').prop("disabled", true);
+        };
       });
     });
   </script>
@@ -208,7 +198,7 @@
               <div class="col-md-6 col-12 text-center">
                 <ul class="selectradio selectradio-inline">
                   <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-1" value="1">
+                    <input type="radio" name="radiogroup2" id="select2-1" value="1" class="send2">
                     <label for="select2-1" class="selectradio-label">男性</label>
                   </li>
                 </ul>
@@ -216,7 +206,7 @@
               <div class="col-md-6 col-12 text-center">
                 <ul class="selectradio selectradio-inline">
                   <li class="selectradio-item">
-                    <input type="radio" name="radiogroup2" id="select2-2" value="2">
+                    <input type="radio" name="radiogroup2" id="select2-2" value="2" class="send2">
                     <label for="select2-2" class="selectradio-label">女性</label>
                   </li>
                 </ul>
@@ -226,7 +216,7 @@
         </div>
 
         <div class="text-right my-3 readmore-button-box">
-          <a href="#2"><button class="send2">次へ</button></a>
+          <a href="#2"><button id="send2">次へ</button></a>
         </div>
         <div id="2" class="readmore-area">
 
