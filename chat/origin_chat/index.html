@@ -99,6 +99,35 @@
     });
   </script>
 
+  <!-- 生年月日 -->
+  <script>
+    $(function() {
+      //始めにjQueryでボタンを無効化する
+      $('.send3').prop("disabled", true);
+
+      //入力欄の操作時
+      $('form input:required').change(function() {
+        //必須項目が空かどうかフラグ
+        let flag = true;
+        //必須項目をひとつずつチェック
+        $('form input:required').each(function(e) {
+          //もし必須項目が空なら
+          if ($('form input:required').eq(e).val() === "") {
+            flag = false;
+          }
+        });
+        //全て埋まっていたら
+        if (flag) {
+          //送信ボタンを復活
+          $('.send3').prop("disabled", false);
+        } else {
+          //送信ボタンを閉じる
+          $('.send3').prop("disabled", true);
+        }
+      });
+    });
+  </script>
+
 
   <!-- 追加 -->
 </head>
@@ -251,7 +280,7 @@
               <div class="row">
                 <!-- 生年月日 -->
                 <div class="col-md-4 col-12 text-center my-1">
-                  <select name="year" class="custom-select">
+                  <select name="year" class="custom-select" required>
                     <option value=""></option>
                     <option value="1940">1940年</option>
                     <option value="1941">1941年</option>
@@ -337,7 +366,7 @@
                   </select>
                 </div>
                 <div class="col-md-4 col-12 text-center my-1">
-                  <select name="month" class="custom-select">
+                  <select name="month" class="custom-select" required>
                     <option value=""></option>
                     <option value="1">1月</option>
                     <option value="2">2月</option>
@@ -354,7 +383,7 @@
                   </select>
                 </div>
                 <div class="col-md-4 col-12 text-center my-1">
-                  <select name="day" class="custom-select">
+                  <select name="day" class="custom-select" required>
                     <option value=""></option>
                     <option value="1">1日</option>
                     <option value="2">2日</option>
@@ -393,7 +422,10 @@
             </div>
           </div>
 
-          <p class="text-right my-3 readmore-button-box"><a href="#3">次へ</a></p>
+          <!-- <p class="text-right my-3 readmore-button-box"><a href="#3">次へ</a></p> -->
+          <div class="text-right my-3 readmore-button-box">
+            <a href="#3"><button class="send3">次へ</button></a>
+          </div>
           <div id="3" class="readmore-area">
 
             <!-- メールアドレス -->
