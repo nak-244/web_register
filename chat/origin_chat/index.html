@@ -58,13 +58,13 @@
       $('.send1').prop("disabled", true);
 
       //入力欄の操作時
-      $('form input:required').change(function() {
+      $('form div#name input:required').change(function() {
         //必須項目が空かどうかフラグ
         let flag = true;
         //必須項目をひとつずつチェック
-        $('form input:required').each(function(e) {
+        $('form div#name input:required').each(function(e) {
           //もし必須項目が空なら
-          if ($('form input:required').eq(e).val() === "") {
+          if ($('form div#name input:required').eq(e).val() === "") {
             flag = false;
           }
         });
@@ -132,30 +132,31 @@
   <script>
     $(function() {
       //始めにjQueryでボタンを無効化する
-      $('.send1').prop("disabled", true);
+      $('.send4').prop("disabled", true);
 
       //入力欄の操作時
-      $('form input:required').change(function() {
+      $('form div#mail input:required').change(function() {
         //必須項目が空かどうかフラグ
         let flag = true;
         //必須項目をひとつずつチェック
-        $('form input:required').each(function(e) {
+        $('form div#mail input:required').each(function(e) {
           //もし必須項目が空なら
-          if ($('form input:required').eq(e).val() === "") {
+          if ($('form div#mail input:required').eq(e).val() === "") {
             flag = false;
           }
         });
         //全て埋まっていたら
         if (flag) {
           //送信ボタンを復活
-          $('.send1').prop("disabled", false);
+          $('.send4').prop("disabled", false);
         } else {
           //送信ボタンを閉じる
-          $('.send1').prop("disabled", true);
+          $('.send4').prop("disabled", true);
         }
       });
     });
   </script>
+
 
   <!-- 追加 -->
 </head>
@@ -195,7 +196,7 @@
             あなた
           </figcaption>
         </figure>
-        <div class="balloon-text-left">
+        <div id="name" class="balloon-text-left">
           <div class="row">
             <!-- 漢字 -->
             <div class="col-12 col-md-6">
@@ -469,7 +470,7 @@
               </div>
             </div>
             <!-- メールアドレス -->
-            <div class="balloon">
+            <div id="mail" class="balloon">
               <figure class="balloon-image-right">
                 <img src="assets/img/user.png" alt="登録ユーザー">
                 <figcaption class="balloon-image-description">
@@ -482,14 +483,16 @@
                   <div class="col-12 col-md-12">
                     <span class="small">メールアドレス</span>
                     <div class="input-group ">
-                      <input type="text" class="form-control" style="width:600px">
+                      <input type="text" class="form-control" style="width:600px" required>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <p class="text-right my-3 readmore-button-box"><a href="#4">次へ</a></p>
+            <div class="text-right my-3 readmore-button-box">
+              <a href="#4"><button class="send4">次へ</button></a>
+            </div>
             <div id="4" class="readmore-area">
 
               <!-- 住所 -->
