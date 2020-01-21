@@ -157,6 +157,35 @@
     });
   </script>
 
+  <!-- 住所 -->
+  <script>
+    $(function() {
+      //始めにjQueryでボタンを無効化する
+      $('.send5').prop("disabled", true);
+
+      //入力欄の操作時
+      $('form div#address input:required').change(function() {
+        //必須項目が空かどうかフラグ
+        let flag = true;
+        //必須項目をひとつずつチェック
+        $('form div#address input:required').each(function(e) {
+          //もし必須項目が空なら
+          if ($('form div#address input:required').eq(e).val() === "") {
+            flag = false;
+          }
+        });
+        //全て埋まっていたら
+        if (flag) {
+          //送信ボタンを復活
+          $('.send5').prop("disabled", false);
+        } else {
+          //送信ボタンを閉じる
+          $('.send5').prop("disabled", true);
+        }
+      });
+    });
+  </script>
+
 
   <!-- 追加 -->
 </head>
@@ -513,7 +542,7 @@
                 </div>
               </div>
               <!-- 住所 -->
-              <div class="balloon">
+              <div class="balloon" id="address">
                 <figure class="balloon-image-right">
                   <img src="assets/img/user.png" alt="登録ユーザー">
                   <figcaption class="balloon-image-description">
@@ -532,14 +561,16 @@
                     <div class="col-12 col-md-12">
                       <span class="small">郵便番号を入力すると自動反映されます</span>
                       <div class="input-group ">
-                        <input type="text" class="form-control" id="住所">
+                        <input type="text" class="form-control" id="住所" required>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <p class="text-right my-3 readmore-button-box"><a href="#5">次へ</a></p>
+              <div class="text-right my-3 readmore-button-box">
+                <a href="#5"><button class="send5">次へ</button></a>
+              </div>
               <div id="5" class="readmore-area">
 
                 <!-- 希望職種 -->
