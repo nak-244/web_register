@@ -106,13 +106,13 @@
       $('.send3').prop("disabled", true);
 
       //入力欄の操作時
-      $('form input:required').change(function() {
+      $('form select:required').change(function() {
         //必須項目が空かどうかフラグ
         let flag = true;
         //必須項目をひとつずつチェック
-        $('form input:required').each(function(e) {
+        $('form select:required').each(function(e) {
           //もし必須項目が空なら
-          if ($('form input:required').eq(e).val() === "") {
+          if ($('form select:required').eq(e).val() === "") {
             flag = false;
           }
         });
@@ -128,6 +128,34 @@
     });
   </script>
 
+  <!-- メールアドレス -->
+  <script>
+    $(function() {
+      //始めにjQueryでボタンを無効化する
+      $('.send1').prop("disabled", true);
+
+      //入力欄の操作時
+      $('form input:required').change(function() {
+        //必須項目が空かどうかフラグ
+        let flag = true;
+        //必須項目をひとつずつチェック
+        $('form input:required').each(function(e) {
+          //もし必須項目が空なら
+          if ($('form input:required').eq(e).val() === "") {
+            flag = false;
+          }
+        });
+        //全て埋まっていたら
+        if (flag) {
+          //送信ボタンを復活
+          $('.send1').prop("disabled", false);
+        } else {
+          //送信ボタンを閉じる
+          $('.send1').prop("disabled", true);
+        }
+      });
+    });
+  </script>
 
   <!-- 追加 -->
 </head>
@@ -422,7 +450,6 @@
             </div>
           </div>
 
-          <!-- <p class="text-right my-3 readmore-button-box"><a href="#3">次へ</a></p> -->
           <div class="text-right my-3 readmore-button-box">
             <a href="#3"><button class="send3">次へ</button></a>
           </div>
