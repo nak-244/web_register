@@ -186,6 +186,23 @@
     });
   </script>
 
+  <!-- 希望職種 -->
+  <script>
+    $(function() {
+      //始めにjQueryでボタンを無効化する
+      $('.send6').prop("disabled", true);
+
+      $(".jobjob").click(function() {
+        var ck_count = $(".cb :checked").length;
+        if (ck_count == 0) {
+          $('.send6').prop("disabled", false);
+        } else {
+          $('.send6').prop("disabled", true);
+        }
+      });
+    });
+  </script>
+
 
   <!-- 追加 -->
 </head>
@@ -535,8 +552,7 @@
                 <div class="balloon-text-right">
                   <p>ありがとうございます！<br>
                     もう少しだけ質問にお付き合いください。<br>
-                    現在お住まいのご住所を入力ください。番地までのご入力は不要です。<br><br>
-                    郵便番号を入力いただくと自動反映されますのでご活用ください。<br>
+                    現在お住まいのご住所の郵便番号をご入力ください。<br><br>
                     ※お住まいから最寄の当社支店と連携します！
                   </p>
                 </div>
@@ -555,13 +571,13 @@
                     <div class="col-6 col-md-4">
                       <span class="small">郵便番号</span>
                       <div class="input-group ">
-                        <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');">
+                        <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" required>
                       </div>
                     </div>
                     <div class="col-12 col-md-12">
-                      <span class="small">郵便番号を入力すると自動反映されます</span>
+                      <span class="small">▼ご確認ください▼</span>
                       <div class="input-group ">
-                        <input type="text" class="form-control" id="住所" required>
+                        <input type="text" class="form-control" id="住所" readonly>
                       </div>
                     </div>
                   </div>
@@ -600,27 +616,27 @@
                         <!-- 希望職種 -->
                         <div class="col-md-12 col-12 mx-2">
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">販売/飲食/営業/イベント系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck2">
                             <label class="custom-control-label" for="customCheck2">軽作業/倉庫/物流系・製造系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck3">
                             <label class="custom-control-label" for="customCheck3">コールセンター/事務系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck4">
                             <label class="custom-control-label" for="customCheck4">ＩＴ/技術系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck5">
                             <label class="custom-control-label" for="customCheck5">医療/介護/福祉系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck6">
                             <label class="custom-control-label" for="customCheck6">その他</label>
                           </div>
                         </div>
@@ -630,6 +646,9 @@
                   </div>
                 </div>
 
+                <div class="text-right my-3 readmore-button-box">
+                  <a href="https://www.yahoo.co.jp/"><button class="send6">送信する</button></a>
+                </div>
 
 
               </div> <!-- id=5 -->
