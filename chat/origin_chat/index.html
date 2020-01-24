@@ -222,7 +222,7 @@
                   <div class="col-12 col-md-12">
                     <span class="small">メールアドレス</span>
                     <div class="input-group ">
-                      <input type="text" class="form-control" style="width:600px" required>
+                      <input type="text" class="form-control" style="width:600px" name="mail" required>
                     </div>
                   </div>
                 </div>
@@ -264,13 +264,13 @@
                     <div class="col-6 col-md-4">
                       <span class="small">郵便番号</span>
                       <div class="input-group ">
-                        <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" required>
+                        <input type="tel" class="form-control" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" name="yubin" required>
                       </div>
                     </div>
                     <div class="col-12 col-md-12">
                       <span class="small">▼ご確認ください▼</span>
                       <div class="input-group ">
-                        <input type="text" class="form-control" id="住所" readonly>
+                        <input type="text" class="form-control" id="住所" name="address" readonly>
                       </div>
                     </div>
                   </div>
@@ -309,27 +309,27 @@
                         <!-- 希望職種 -->
                         <div class="col-md-12 col-12 mx-2">
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck1">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck1" name="cat1" value="1">
                             <label class="custom-control-label" for="customCheck1">販売/飲食/営業/イベント系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck2">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck2" name="cat2" value="1">
                             <label class="custom-control-label" for="customCheck2">軽作業/倉庫/物流系・製造系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck3">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck3" name="cat3" value="1">
                             <label class="custom-control-label" for="customCheck3">コールセンター/事務系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck4">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck4" name="cat4" value="1">
                             <label class="custom-control-label" for="customCheck4">ＩＴ/技術系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck5">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck5" name="cat5" value="1">
                             <label class="custom-control-label" for="customCheck5">医療/介護/福祉系</label>
                           </div>
                           <div class="custom-control custom-checkbox p-2">
-                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck6">
+                            <input type="checkbox" class="custom-control-input jobjob" id="customCheck6" name="cat6" value="1">
                             <label class="custom-control-label" for="customCheck6">その他</label>
                           </div>
                         </div>
