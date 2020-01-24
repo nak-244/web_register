@@ -82,13 +82,13 @@ $(function() {
   $('.send3').prop("disabled", true);
 
   //入力欄の操作時
-  $('form select:required').change(function() {
+  $('form div#birth input:required').change(function() {
     //必須項目が空かどうかフラグ
     let flag = true;
     //必須項目をひとつずつチェック
-    $('form select:required').each(function(e) {
+    $('form div#birth input:required').each(function(e) {
       //もし必須項目が空なら
-      if ($('form select:required').eq(e).val() === "") {
+      if ($('form div#birth input:required').eq(e).val() === "") {
         flag = false;
       }
     });
