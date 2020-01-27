@@ -341,26 +341,8 @@
 
                 <div class="text-right my-3 readmore-button-box">
                   <!-- <button type="button" class="send6 btn btn-secondary">送信する</button> -->
-                  <input type="submit" value="送信する" id="sendbtn">
+                  <input type="submit" value="送信する">
                 </div>
-
-<script>
-$(function(){
-  // 初期状態のボタンは無効
-  $("#sendbtn").prop("disabled", true);
-    // チェックボックスの状態が変わったら（クリックされたら）
-    $("input[type='checkbox']").on('change', function () {
-        // チェックされているチェックボックスの数
-        if ($(".chk:checked").length > 0) {
-          // ボタン有効
-          $("#sendbtn").prop("disabled", false);
-        } else {
-          // ボタン無効
-          $("#sendbtn").prop("disabled", true);
-        }
-    });
-});
-</script>
 
               </div> <!-- id=5 -->
             </div> <!-- id=4 -->
