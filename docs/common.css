@@ -12,6 +12,7 @@
   .pc {
     display: none !important;
   }
+
   .sp {
     display: block !important;
   }
@@ -23,18 +24,16 @@
   -ms-filter: "alpha(opacity=70)";
 }
 
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px !important;
   }
 }
 
-
 /* ガターの溝をなくす */
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
+.no-gutter>[class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #map {
@@ -61,6 +60,7 @@
 }
 
 @media only screen and (max-width: 800px) {
+
   .col-head-type1 tr,
   .col-head-type1 th,
   .col-head-type1 td {
@@ -80,65 +80,293 @@
 
 /* ボタンキラーン */
 .red-shiny a {
-/* display: block; */
-position: relative;
-z-index: 2;
-overflow: hidden;
-/* width: 100%; */
-font-weight: bold ;
-border-bottom: solid 5px #f44744 ;
-border-radius: 5px;
-background-color: #D83331 ;
-color: #ffffff !important;
-padding: 12px 0;
-text-align: center;
-text-decoration: none;
-transition: .25s linear;
--webkit-transition: .25s linear;
--moz-transition: .25s linear;
+  /* display: block; */
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  /* width: 100%; */
+  font-weight: bold;
+  border-bottom: solid 5px #f44744;
+  border-radius: 5px;
+  background-color: #D83331;
+  color: #ffffff !important;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: .25s linear;
+  -webkit-transition: .25s linear;
+  -moz-transition: .25s linear;
 }
+
 .red-shiny {
-display: block;
-width: 100%;
-margin-bottom: 1em;
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
 }
+
 .red-shiny a:hover {
--ms-transform: translateY(4px);
--webkit-transform: translateY(4px);
-transform: translateY(4px);/*下に動く*/
-border-bottom: none;/*線を消す*/
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  border-bottom: none;
+  /*線を消す*/
 }
+
 .red-shiny a:before {
-display: block;
-position: absolute;
-z-index: -1;
-left: -30%;
-top: -50%;
-content: "";
-width: 30px;
-height: 100px;
-transform: rotate(30deg);
--webkit-transform: rotate(30deg);
--moz-transform: rotate(30deg);
-background-image: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)),color-stop(100%,rgba(255,255,255,0)));
-background-image: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, #ffffff rgba(255,255,255,1),rgba(255,255,255,0) 100%);
-animation: shiny 3s infinite linear;
--webkit-animation: shiny 3s infinite linear;
--moz-animation: shiny 3s infinite linear;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: -30%;
+  top: -50%;
+  content: "";
+  width: 30px;
+  height: 100px;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 100%);
+  animation: shiny 3s infinite linear;
+  -webkit-animation: shiny 3s infinite linear;
+  -moz-animation: shiny 3s infinite linear;
 }
+
 @keyframes shiny {
-0% { left: -30%; }
-20% { left: 120%; }
-100% { left: 120%; }
+  0% {
+    left: -30%;
+  }
+
+  20% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
 }
+
 @-webkit-keyframes shiny {
-0% { left: -30%; }
-20% { left: 120%; }
-100% { left: 120%; }
+  0% {
+    left: -30%;
+  }
+
+  20% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
 }
+
 @-moz-keyframes shiny {
-0% { left: -30%; }
-20% { left: 120%; }
-100% { left: 120%;}
+  0% {
+    left: -30%;
+  }
+
+  20% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+/* チャットCSS */
+.custom-select {
+  width: auto !important;
+}
+
+@media only screen and (max-width: 750px) {
+  .custom-select {
+    width: 100% !important;
+  }
+}
+
+/*--------------------
+ 吹き出しを作る
+--------------------*/
+.balloon {
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.balloon:before, .balloon:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.balloon figure {
+  width: 60px;
+  height: 60px;
+}
+
+.balloon-image-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.balloon-image-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.balloon figure img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.balloon-image-description {
+  padding: 5px 0 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+.balloon-text-right, .balloon-text-left {
+  position: relative;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  max-width: -webkit-calc(100% - 120px);
+  max-width: calc(100% - 120px);
+  display: inline-block;
+}
+
+.balloon-text-right {
+  border-color: #aaa;
+}
+
+.balloon-text-left {
+  border-color: #aaa;
+}
+
+.balloon-text-right {
+  float: left;
+}
+
+.balloon-text-left {
+  float: right;
+}
+
+.balloon p {
+  margin: 0 0 20px;
+}
+
+.balloon p:last-child {
+  margin-bottom: 0;
+}
+
+/* 三角部分 */
+.balloon-text-right:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid #aaa;
+  top: 15px;
+  left: -20px;
+}
+
+.balloon-text-right:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid #fff;
+  top: 15px;
+  left: -19px;
+}
+
+.balloon-text-left:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid #aaa;
+  top: 15px;
+  right: -20px;
+}
+
+.balloon-text-left:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid #fff;
+  top: 15px;
+  right: -19px;
+}
+
+.readmore-area {
+  display: none;
+  /* デフォルトでは非表示にしておく */
+}
+
+/* チェックボックス */
+input[type="checkbox"]{
+  display: none;
+}
+
+label.btn span {
+  font-size: 1.2em;
+}
+
+label input[type="checkbox"]~i.fa.fa-square-o {
+  color: #c8c8c8;
+  display: inline;
+}
+
+label input[type="checkbox"]~i.fa.fa-check-square-o {
+  display: none;
+}
+
+label input[type="checkbox"]:checked~i.fa.fa-square-o {
+  display: none;
+}
+
+label input[type="checkbox"]:checked~i.fa.fa-check-square-o {
+  color: #00AEEF;
+  display: inline;
+}
+
+label:hover input[type="checkbox"]~i.fa {
+  color: #00AEEF;
+}
+
+div[data-toggle="buttons"] label.active {
+  color: #00AEEF;
+}
+
+div[data-toggle="buttons"] label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: none;
+  border: 0px solid #c8c8c8;
+  border-radius: 3px;
+  color: #c8c8c8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+div[data-toggle="buttons"] label:hover {
+  color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
