@@ -1,0 +1,79 @@
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+}
+
+.alpha a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}
+
+
+/* ガターの溝をなくす */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+#map {
+  height: 650px;
+  z-index: 1;
+}
+
+/* テーブルのレスポンシブ トップページ */
+.col-head-type1 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.col-head-type1 th,
+.col-head-type1 td {
+  border: 1px solid #dbe1e8;
+  padding: 8px;
+}
+
+.col-head-type1 th {
+  background: #f9fafc;
+  text-align: left;
+  width: 150px;
+}
+
+@media only screen and (max-width: 800px) {
+  .col-head-type1 tr,
+  .col-head-type1 th,
+  .col-head-type1 td {
+    display: block;
+    width: auto;
+  }
+
+  .col-head-type1 tr:first-child {
+    border-top: 1px solid #dbe1e8;
+  }
+
+  .col-head-type1 th,
+  .col-head-type1 td {
+    border-top: none;
+  }
+}
