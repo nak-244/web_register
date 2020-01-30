@@ -84,3 +84,8 @@ $(function() {
     $('#p01').text(citys);
   });
 });
+
+// フォームバリデーションチェック
+$(function() {
+  jQuery("#dash").validationEngine();
+});
