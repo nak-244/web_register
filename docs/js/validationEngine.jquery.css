@@ -20,7 +20,7 @@
 .formError {
 	position: absolute;
 	top: 300px;
-	left: 300px;
+	left: 100px!important;
 	display: block;
 	cursor: pointer;
 	text-align: left;
@@ -45,7 +45,7 @@
 	background: #ee0101;
 	position:relative;
 	color: #fff;
-	min-width: 120px;
+	min-width: 230px;
 	font-size: 11px;
 	border: 2px solid #ddd;
 	box-shadow: 0 0 6px #000;
