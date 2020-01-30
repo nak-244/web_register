@@ -370,3 +370,11 @@ div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+/* modal固定用 */
+body.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
