@@ -19,6 +19,14 @@
   <link rel="stylesheet" href="common.css">
   <script src="assets/js/box.js"></script>
   <script src="js/olp.js"></script>
+  <link rel="stylesheet" href="js/validationEngine.jquery.css">
+  <script src="js/jquery.validationEngine.js"></script>
+  <script src="js/jquery.validationEngine-ja.js"></script>
+  <script type="text/javascript">
+$(function(){
+   jQuery("#dash").validationEngine();
+});
+</script>
 </head>
 
 <body>
@@ -266,7 +274,7 @@
           </button>
         </div>
 
-        <form method="post" action="https://script.google.com/macros/s/AKfycbya7Jx1QCNkXRArW546GNwVu4KOQzjXPvqyMhzo9AGIFY5lomd7/exec">
+        <form id="dash" method="post" action="https://script.google.com/macros/s/AKfycbya7Jx1QCNkXRArW546GNwVu4KOQzjXPvqyMhzo9AGIFY5lomd7/exec">
           <div class="modal-body">
             <div class="balloon">
               <figure class="balloon-image-left">
@@ -284,11 +292,9 @@
             <div class="card">
               <div class="card-body">
                 <span class="small">メールアドレス</span>
-                <div class="form-group">
                   <div class="input-group" id="mail">
-                    <input type="email" class="form-control" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" required />
+                    <input type="email" class="form-control validate[required,custom[email]]" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" />
                   </div>
-                </div>
               </div>
             </div>
             <!-- 次へボタン-->
@@ -7903,9 +7909,5 @@
   </div>
   <!-- //modal -->
 </body>
-
-<script>
-
-</script>
 
 </html>
