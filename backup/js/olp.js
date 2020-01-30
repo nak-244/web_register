@@ -71,3 +71,16 @@ $(function() {
     }
   });
 });
+
+// チェックボックスの値を表示
+$(function() {
+  $('input[name="area"]').change(function() {
+    var citys = [];
+    $('input[name="area"]:checked').each(function() {
+      // ③value値を配列に格納
+      // citys.push($(this).val());
+      citys.push($(this).attr('id'));
+    });
+    $('#p01').text(citys);
+  });
+});

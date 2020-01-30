@@ -285,7 +285,7 @@
               <div class="card-body">
                 <span class="small">メールアドレス</span>
                 <div class="input-group" id="mail">
-                  <input type="email" class="form-control" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" required />
+                  <input type="email" class="form-control" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" required/>
                 </div>
               </div>
             </div>
@@ -7475,17 +7475,7 @@
 </body>
 
 <script>
-  $(function() {
-    $('input[name="area"]').change(function() {
-      var citys = [];
-      $('input[name="area"]:checked').each(function() {
-        // ③value値を配列に格納
-        // citys.push($(this).val());
-        citys.push($(this).attr('id'));
-      });
-      $('#p01').text(citys);
-    });
-  });
+
 </script>
 
 </html>
