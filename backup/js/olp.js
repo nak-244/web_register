@@ -51,13 +51,13 @@ $(function() {
   $('.send1').prop("disabled", true);
 
   //入力欄の操作時
-  $('form div#mail input:required').change(function() {
+  $('form div#mail input').change(function() {
     //必須項目が空かどうかフラグ
     let flag = true;
     //必須項目をひとつずつチェック
-    $('form div#mail input:required').each(function(e) {
+    $('form div#mail input').each(function(e) {
       //もし必須項目が空なら
-      if ($('form div#mail input:required').eq(e).val() === "") {
+      if ($('form div#mail input').eq(e).val() === "") {
         flag = false;
       }
     });
@@ -83,4 +83,9 @@ $(function() {
     });
     $('#p01').text(citys);
   });
+});
+
+// フォームバリデーションチェック
+$(function() {
+  jQuery("#dash").validationEngine();
 });
