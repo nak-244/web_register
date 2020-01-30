@@ -44,3 +44,30 @@ $(function(){
         window.scrollTo( 0 , scrollPosition );
     });
 });
+
+// メールアドレス　入力しないと次へボタンがクリックできない
+$(function() {
+  //始めにjQueryでボタンを無効化する
+  $('.send1').prop("disabled", true);
+
+  //入力欄の操作時
+  $('form div#mail input:required').change(function() {
+    //必須項目が空かどうかフラグ
+    let flag = true;
+    //必須項目をひとつずつチェック
+    $('form div#mail input:required').each(function(e) {
+      //もし必須項目が空なら
+      if ($('form div#mail input:required').eq(e).val() === "") {
+        flag = false;
+      }
+    });
+    //全て埋まっていたら
+    if (flag) {
+      //送信ボタンを復活
+      $('.send1').prop("disabled", false);
+    } else {
+      //送信ボタンを閉じる
+      $('.send1').prop("disabled", true);
+    }
+  });
+});

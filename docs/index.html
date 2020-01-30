@@ -266,6 +266,7 @@
           </button>
         </div>
 
+<form>
         <div class="modal-body">
           <div class="balloon">
             <figure class="balloon-image-left">
@@ -283,14 +284,14 @@
           <div class="card">
             <div class="card-body">
               <span class="small">メールアドレス</span>
-              <div class="input-group ">
-                <input type="email" class="form-control" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" required>
+              <div class="input-group" id="mail">
+                <input type="email" class="form-control" autocorrect="off" autocapitalize="off" style="width:600px" name="mail" pattern="[\w\d_-]+@[\w\d_-]+\.[\w\d._-]+" required />
               </div>
             </div>
           </div>
           <!-- 次へボタン-->
           <div class="py-5 readmore-button-box">
-            <a href="#1"><button type="button" class="btn btn-primary">次へ</button></a>
+            <a href="#1"><button type="button" class="send1 btn btn-primary">次へ</button></a>
           </div>
           <!-- 希望職種-->
           <div id="1" class="readmore-area mt-5">
@@ -384,7 +385,7 @@
               </figure>
               <div class="balloon-text-right">
                 <p>ありがとうございます。次が最後の質問です。<br>
-                  ご希望の勤務地をすべて選択してください。<br>都道府県を選択すると市区町村の一覧が表示されます。複数の都道府県を選択することもできます。終わりましたら、「登録する」ボタンを押してください。</p>
+                  ご希望の勤務地（市区町村）をすべて選択してください。<br>都道府県を選択すると市区町村の一覧が表示されます。複数の都道府県から選択することもできます。終わりましたら、「登録する」ボタンを押してください。</p>
               </div>
             </div>
             <div class="card">
@@ -7562,7 +7563,7 @@
             </div>
           </div>
         </div>
-
+</form>
         <div class="modal-footer">
           <button type="button" class="btn btn-default modalCloser" data-dismiss="modal">閉じる</button>
         </div>
